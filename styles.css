@@ -2,13 +2,48 @@ body {
     background-color: #0d1117; /* Very dark gray (almost black) background */
     color: #c9d1d9; /* Off-white text color typical of GitHub Dark */
     font-family: 'Consolas', 'Monaco', monospace; /* Monospaced font for that IDE feel */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-}
-h1 {
-    font-size: 40px;
+    padding: 0;
 }
 
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    height: 100vh;
+}
+
+.bio {
+    text-align: left;
+}
+
+.links {
+    text-align: right;
+}
+
+h1, p {
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: #58a6ff; /* Light blue for headings, typical of GitHub Dark */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.links a {
+    display: block; /* Each link on a new line */
+    margin: 0.2em 0;
+    color: #58a6ff; /* Light blue to maintain style consistency */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
