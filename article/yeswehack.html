@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>YesWeHack – What's wrong with Bug Bounty Platforms? featuring Intigriti and Immunefi.</title>
+        <link rel="stylesheet" href="yeswehack.css">
+    </head>
+
+    <body>
+        <div>
+            <h1>YesWeHack – What's wrong with Bug Bounty Platforms? featuring Intigriti and Immunefi.</h1>
+            <p>Usually, platforms screw you over with their vulnerability classifications, for example.</p>
+        </div>
+
+        <div>
+            <h2>Intigriti</h2>
+            <p>
+                If you take a look at Intigriti <a href="https://kb.intigriti.com/en/articles/5991807-bounty-tiers">bounty tiers</a>,
+                there is one unexpected tier: <b>Exceptional</b>. Exceptional does not match with the standard vulnerability classification <a href="https://www.first.org/cvss/calculator/4.0">CVSS</a>.
+            </p>
+        </div>
+        <div>
+            <h2>Immunefi</h2>
+            <p>
+                Crypto bros have created their own <a href="https://immunefi.com/immunefi-vulnerability-severity-classification-system-v2-3">severity classification system</a>.
+                </br></br>
+                So, a couple of weeks ago, I reported some bugs in the <a href="https://github.com/firedancer-io/firedancer">Firedancer</a> network stack.
+                But the bug reports were rejected because the bugs were in the main branch
+                (now in the <a href="https://github.com/firedancer-io/firedancer/releases/tag/v0.202.20016">production</a>),
+                not in the <a href="https://github.com/firedancer-io/firedancer/releases/tag/v0.113.20007">Mainnet-v0.113.20007</a>.
+                I was like, fair enough.
+                </br></br>
+                After some time, I found a null dereference in the <a href="https://github.com/firedancer-io/firedancer/releases/tag/v0.113.20007">Mainnet-v0.113.20007</a> HTTP implementation.
+                Guess what happened next? </br>
+                Firedancer rejected it, saying it does not fall under <i>Immunefi's severity classification system</i>.
+                Now, the funny part is that Firedancer was <a href="https://github.com/firedancer-io/audits">audited</a>,
+                My findings and the findings in the audits are similar, typical memory corruption bugs.
+                But my disadvantage was that I was going through a rigged platform.
+            </p>
+        </div>
+        <div>
+            <h2>YesWeHack</h2>
+            <p>
+                You know, I am a bit disappointed with <b>Intigriti</b>. But with <b>Immunefi</b>—they are a crypto platform, so scamming people is in their nature.
+                </br></br>
+                Anyway, I selected a target on <b>YesWeHack</b> and found in total of 4 bugs.
+            </p>
+
+            <h3>You Can't Report</h3>
+            <p>
+                As any normal human being, first you find a bug, then create a account and then report it. Well, the first two steps were easy.
+            </p>
+            <blockquote>
+                To submit bug reports, you must first complete your KYC
+            </blockquote>
+            <p>
+                As any sane person on the planet who likes privacy, I do have a big problem with doing KYC.
+                </br></br>
+                But after some time, I was like, "It's YesWeHack; I can try, let's do this."
+                To my surprise, YesWeHack uses a local incompetent platform called Mangopay for processing payments, and Mangopay requires you to send them a copy of your passport for KYC.
+                After reading this, honestly, my first reaction was, "Bhosdike, chutiya hai kya?".
+                </br></br>
+                I get it—for a lot of people, that won't be a problem, but it is for a lot of people because there are no other options.
+                How the fuck can you do something as idiotic as this? Don't you know there can be people who don't have a passport?
+                </br></br>          
+                If I did, I wouldn't give it to you. I would give you my Aadhaar card (the equivalent of an SSN) number because it has been breached multiple times.
+            </p>
+            <blockquote>
+                Asking for some quick changes
+            </blockquote>
+            <p>
+                Anyway, I asked them if they could change some bits on their server to let me report it at least, and we would figure everything out later on.
+                </br></br>
+                They didn’t. Instead, they started teaching me the philosophy of "ethical hacking and bug bounty platforms" and why KYC is important for "protection against money laundering."
+            </p>
+
+            <h4>A Word to YesWeHack Investors</h4>
+            <p>
+                If you are reading this, the chances are very low.
+                You had better chances of doubling or tripling your money at a Vegas slot machine than you do now with YesWeHack.
+            </p>
+        </div>
+        </br></br></br></br></br></br></br></br>
+    </body>
+</html>
